@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body
+    class="bg-black font-[Roboto] text-white grid h-screen place-content-center"
+  >
+    <h1
+      class="text-6xl font-extrabold text-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text uppercase tracking-widest drop-shadow-2xl animate-pulse"
+    >
+      Calculator
+    </h1>
+    <section
+      class="calculator min-w-[300px] mt-10 m-5 pb-4 flex flex-col items-center border-2 rounded-lg border-none shadow-lg bg-slate-500"
+    >
+      <p
+        class="js-display w-4/5 text-[26px] m-4 shadow-md pl-4 pr-4 pt-2 pb-2 rounded-lg bg-[#eeeeee] text-black"
+      ></p>
+      <p>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('1');"
+        >
+          1
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('2');"
+        >
+          2
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('3');"
+        >
+          3
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-[#fea00a] rounded-full border-none m-[2px] mt-3 active:bg-[#ffbb4e]"
+          onclick="updateCalculation('+');"
+        >
+          +
+        </button>
+      </p>
+      <p>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('4');"
+        >
+          4
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('5');"
+        >
+          5
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('6');"
+        >
+          6
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-[#fea00a] rounded-full border-none m-[2px] mt-3 active:bg-[#ffbb4e]"
+          onclick="updateCalculation('-');"
+        >
+          -
+        </button>
+      </p>
+      <p>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('7');"
+        >
+          7
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('8');"
+        >
+          8
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('9');"
+        >
+          9
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-[#fea00a] rounded-full border-none m-[2px] mt-3 active:bg-[#ffbb4e]"
+          onclick="updateCalculation('*');"
+        >
+          *
+        </button>
+      </p>
+      <p>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('0');"
+        >
+          0
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="updateCalculation('.');"
+        >
+          .
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-gray-600 rounded-full border-none m-[2px] mt-3 active:bg-gray-400"
+          onclick="calculateResult();"
+        >
+          =
+        </button>
+        <button
+          class="text-[26px] h-[60px] w-[60px] bg-[#fea00a] rounded-full border-none m-[2px] mt-3 active:bg-[#ffbb4e]"
+          onclick="updateCalculation('/');"
+        >
+          /
+        </button>
+      </p>
+      <p>
+        <button
+          class="text-[26px] pt-3 pb-3 pl-5 pr-5 bg-gray-600 rounded-full border-none mt-3 mb-[2px] ml-0 mr-[2px] active:bg-gray-400"
+          onclick="clearCalculation();"
+        >
+          Clear
+        </button>
+        <button
+          class="text-[26px] pt-3 pb-3 pl-5 pr-5 bg-gray-600 rounded-full border-none mt-3 mb-[2px] ml-[2px] mr-[2px] active:bg-gray-400"
+          onclick="backspace();"
+        >
+          Back
+        </button>
+      </p>
+    </section>
+
+    <script src="scripts/calc.js"></script>
+  </body>
+</html>
